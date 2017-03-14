@@ -1,8 +1,11 @@
+set :stage, :production
+server '159.203.96.87', user: 'deploy', roles: %w{web app db}
+
+
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
-# You can define all roles on a single server, or split them:
-
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
@@ -49,9 +52,9 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "example.com",
-#   user: "user_name",
-#   roles: %w{web app},
+# server "159.203.96.87",
+#   user: "deploy",
+#   roles: %w{web db app},
 #   ssh_options: {
 #     user: "user_name", # overrides user setting above
 #     keys: %w(/home/user_name/.ssh/id_rsa),
